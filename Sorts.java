@@ -6,18 +6,19 @@ public class Sorts{
       int index = i;
       for (int j = i; j < ary.length; j++) {
         if (ary[j] < ary[index]) {
-          index = j;
+          index = j; //replaces when int checked is less than int stored
         }
       }
       int hold = ary[i];
       ary[i] = ary[index];
-      ary[index] = hold;
-      toString(ary);
+      ary[index] = hold; //swaps the indexes
+      //toString(ary);
+      //print statement to check for intended results
     }
   }
 
   public static void main(String[] args) {
-    Random rand = new Random();
+    Random rand = new Random(); //makes random int array with size determined by input
     int[] array = new int[Integer.parseInt(args[0])];
     for (int i = 0; i < array.length; i++) {
       array[i] = Math.abs(rand.nextInt() % 100);
