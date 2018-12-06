@@ -12,6 +12,7 @@ public class Sorts{
       int hold = ary[i];
       ary[i] = ary[index];
       ary[index] = hold;
+      toString(ary);
     }
   }
 
