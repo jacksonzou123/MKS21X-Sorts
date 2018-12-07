@@ -44,9 +44,9 @@ public class Sorts{
     for (int i = 0; i < array.length; i++) {
       array[i] = Math.abs(rand.nextInt() % 100);
     }
-    toString(array);
+    //toString(array);
     Sorts.bubbleSort(array);
-    toString(array);
+    //toString(array);
   }
 
   public static void toString(int[] ary) {
