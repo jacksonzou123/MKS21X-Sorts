@@ -33,7 +33,7 @@ public class Sorts{
           data[i] = data[i+1];
           data[i+1] = hold;
         }
-        toString(data);
+        //toString(data); //code checker
       }
     }
   }
