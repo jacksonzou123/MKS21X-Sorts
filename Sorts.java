@@ -38,7 +38,7 @@ public class Sorts{
     }
   }
 
-  public static void main(String[] args) {
+  /*public static void main(String[] args) {
     Random rand = new Random(); //makes random int array with size determined by input
     int[] array = new int[Integer.parseInt(args[0])];
     for (int i = 0; i < array.length; i++) {
@@ -57,4 +57,5 @@ public class Sorts{
     f = f.substring(0, f.length() - 2) + "]";
     System.out.println(f);
   }
+  */
 }
