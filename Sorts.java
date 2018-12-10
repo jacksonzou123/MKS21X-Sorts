@@ -38,6 +38,10 @@ public class Sorts{
     }
   }
 
+  public static void insertionSort(int[] data) {
+
+  }
+
   /*public static void main(String[] args) {
     Random rand = new Random(); //makes random int array with size determined by input
     int[] array = new int[Integer.parseInt(args[0])];
