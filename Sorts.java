@@ -39,18 +39,37 @@ public class Sorts{
   }
 
   public static void insertionSort(int[] data) {
-
+    for (int i = 1; i < data.length; i++) {
+      boolean hold = true;
+      int check = i;
+      while (hold){
+        if (check == 0) {
+          hold = false;
+        }
+        if (data[i] < data[check]) {
+          check--;
+        }
+        else {
+          hold = false;
+        }
+      }
+      int holder = data[i];
+      for (int j = i; j > check; j--) {
+        data[j] = data[j-1];
+      }
+      data[check] = holder;
+    }
   }
 
-  /*public static void main(String[] args) {
+  public static void main(String[] args) {
     Random rand = new Random(); //makes random int array with size determined by input
     int[] array = new int[Integer.parseInt(args[0])];
     for (int i = 0; i < array.length; i++) {
       array[i] = Math.abs(rand.nextInt() % 100);
     }
-    //toString(array);
-    Sorts.bubbleSort(array);
-    //toString(array);
+    toString(array);
+    Sorts.insertionSort(array);
+    toString(array);
   }
 
   public static void toString(int[] ary) {
@@ -61,5 +80,4 @@ public class Sorts{
     f = f.substring(0, f.length() - 2) + "]";
     System.out.println(f);
   }
-  */
 }
