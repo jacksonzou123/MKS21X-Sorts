@@ -40,24 +40,14 @@ public class Sorts{
 
   public static void insertionSort(int[] data) {
     for (int i = 1; i < data.length; i++) {
-      boolean hold = true;
-      int check = i;
-      while (hold){
-        if (check == 0) {
-          hold = false;
-        }
-        if (data[i] < data[check]) {
-          check--;
-        }
-        else {
-          hold = false;
-        }
+      int hold = data[i];
+      int index = i-1;
+      while (index >= 0 && data[index] > hold) {
+        data[index+1] = data[index];
+        index-=1;
       }
-      int holder = data[i];
-      for (int j = i; j > check; j--) {
-        data[j] = data[j-1];
-      }
-      data[check] = holder;
+      data[index+1] = hold;
+      toString(data);
     }
   }
 
