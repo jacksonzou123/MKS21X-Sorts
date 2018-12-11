@@ -27,13 +27,18 @@ public class Sorts{
   */
   public static void bubbleSort(int[] data){
     for (int index = data.length - 1; index > 0; index-=1) {
+      boolean swap = true;
       for (int i = 0; i < index; i++) {
         if (data[i] > data[i+1]) {
           int hold = data[i];
           data[i] = data[i+1];
           data[i+1] = hold;
+          swap = false;
         }
         //toString(data); //code checker
+      }
+      if (swap) {
+        index = 0;
       }
     }
   }
@@ -47,7 +52,6 @@ public class Sorts{
         index-=1;
       }
       data[index+1] = hold;
-      toString(data);
     }
   }
 
@@ -57,9 +61,9 @@ public class Sorts{
     for (int i = 0; i < array.length; i++) {
       array[i] = Math.abs(rand.nextInt() % 100);
     }
-    toString(array);
+    //toString(array);
     Sorts.insertionSort(array);
-    toString(array);
+    //toString(array);
   }
 
   public static void toString(int[] ary) {
